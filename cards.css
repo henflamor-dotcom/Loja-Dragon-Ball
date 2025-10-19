@@ -18,7 +18,6 @@
     background-color: transparent;
 }
 
-/* Layout geral dos cards */
 .seção-card {
     font-family: 'Russo';
     color: black;
@@ -28,15 +27,10 @@
     align-items: center;
 }
 
-.seção-card img {
-    max-width: 220px;
-}
-
-/* ---- CARD ---- */
 .card1-1, .card1-2, .card1-3, .card1-4 {
     height: auto;
     width: 15rem;
-    background: linear-gradient(180deg, #2a2a2a 0%, var(--color-neutral-dark) 100%);
+    background: var(--color-neutral-dark);
     border: 2px solid var(--color-dominant);
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(255, 123, 0, 0.25);
@@ -48,16 +42,14 @@
     box-shadow: 0 6px 20px rgba(255, 123, 0, 0.45);
 }
 
-/* ---- IMAGEM ---- */
 .card-img-top {
-    height: 15rem;
+    height: auto;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-/* ---- BOTÃO ---- */
 .btn {
     font-family: 'Russo';
     color: #ffffff;
@@ -75,10 +67,9 @@
     box-shadow: 0 0 10px rgba(26, 102, 255, 0.6);
 }
 
-/* ---- TEXTO ---- */
 .Preco {
     font-family: 'Russo';
-    color: #f7a600;
+    color: var(--color-dominant);
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
@@ -87,7 +78,7 @@
 h6 {
     font-family: 'OutfitEL';
     font-size: 16px;
-    color: #f0f0f0;
+    color: var(--color-neutral-light);
     text-align: center;
     margin-top: 8px;
 }

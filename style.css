@@ -31,6 +31,7 @@ body::before {
   --color-accent: #FFEB3B;
   --color-neutral-light: #F5F5F5;
   --color-neutral-dark: #212121;
+  --color-hover: #E9B27F;
 }
 
 @font-face {
@@ -78,7 +79,7 @@ body::before {
 }
 
 header {
-    background-color: var(--color-neutral-dark);
+    background-color: black;
     width: inherit;
     height: 95px;
 }
@@ -134,7 +135,7 @@ header {
 }
 
 .menu nav a:hover {
-    color: #e9b27f;
+    color: var(--color-hover);
 }
 
 .socials {
@@ -164,7 +165,7 @@ header {
 .socials button i {
     font-size: 28px;
     padding-top: 5px;
-    color: var(--color-neutral-dark);
+    color: black;
     transition: color 0.3s;
 }
 
@@ -196,11 +197,12 @@ header {
 /* Divisor Shenlong */
 
 .container-fluid-cards .seção-card img {
-    max-width: 220px;
+    max-width: 200px;
     width: 100%;
 }
 
 /* Footer */
+
 .fundofooter {
     margin-top: 5%;
 }
@@ -218,7 +220,6 @@ header {
     box-sizing: border-box;
 }
 
-/* Texto à esquerda */
 .titulo {
     margin-top: auto;
     display: flex;
@@ -229,7 +230,7 @@ header {
 }
 
 .titulo h4 {
-    font-size: 18px;
+    font-size: 20px;
     font-family: OutfitEL;
     margin: 0;
     color: var(--color-accent);
@@ -242,7 +243,6 @@ header {
     color: var(--color-dominant);
 }
 
-/* Logos à direita */
 .logos {
     display: flex;
     align-items: center;
