@@ -1,0 +1,253 @@
+/* Sobre CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/fundo_pronto.jpg);
+    background-color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@font-face {
+    font-family: 'Russo';
+    src: url(Fontes/RussoOne-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OutfitEL';
+    src: url(Fontes/Outfit-ExtraLight.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OutfitB';
+    src: url(Fontes/Outfit-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OutfitSB';
+    src: url(Fontes/Outfit-SemiBold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header */
+
+.container-fluid {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    height: 107px;
+    padding: 0;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+header {
+    background-color: black;
+    width: inherit;
+    height: 95px;
+}
+
+.logo img {
+    max-width: 204px;
+    width: inherit;
+    padding-bottom: 14%;
+    vertical-align: 0;
+}
+
+.menu {
+    max-width: 828px;
+    width: 150%;
+    padding-top: 3px;
+    font-family: Russo;
+
+    display: inherit;
+    justify-content: center;
+    align-items: inherit;
+}
+.menu nav {
+    display: inherit;
+    gap: 42px;
+}
+
+.menu nav a{
+    color: #ff8400;
+    text-decoration: none;
+    font-size: 24px;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+
+.menu nav a::after {
+    content: " ";
+    width: 0px;
+    height: 4px;
+    transition: width 0.4s;
+    top: 30px;
+    left: 0;
+    position: absolute;
+    background-image: linear-gradient(45deg, #ff2500, #e78d44);
+}
+
+.menu nav a:hover::after {
+    width: 56px;
+}
+
+.menu nav a:last-child:hover::after {
+    width: 66px;
+}
+
+.menu nav a:hover {
+    color: #e9b27f;
+}
+
+.socials {
+    display: inherit;
+}
+
+.socials button {
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(45deg, #ff2500, #e78d44);
+    border: none;
+    border-radius: 15px;
+    margin-right: 8px;
+    cursor: pointer;
+
+}
+
+.socials button i:hover {
+    color: #e9b27f;
+}
+
+.socials button i {
+    font-size: 28px;
+    padding-top: 5px;
+}
+
+/* Sobre */
+
+.banner img{
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    max-height: auto;
+    height: 100%;
+
+}
+
+.Top {
+    max-width: 500px;
+    width: inherit;
+
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    max-height: 1200px;
+    height: 725px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    border: #ff8400 10px solid;
+    margin: 5% auto 5% auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-family: Russo;
+    color: #ff8400;
+
+    margin-top: 1%;
+    display: inherit;
+    justify-content: inherit;
+}
+
+.container p {
+    margin: 0% 4%;
+    font-size: 22px;
+    color: black;
+    font-family: OutfitEL;
+    font-weight: 50;
+    text-shadow: 1px 1px 8px Rgba(194, 87, 0, 0.712);
+    text-align: justify;
+    padding: 40px 40px 0 40px
+}
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    width: 100%;
+    background-color: #000000;
+    background-attachment: scroll;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+
+.titulo {
+    width: inherit;
+    color: #ff8400;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+    margin-top: 2%;
+}
+
+.titulo h4 {
+    font-size: 22px;
+    font-family: OutfitEL;
+    margin-left: 5%;
+    font-weight: 100;
+}    
+
+.titulo h3 {
+    font-size: 28px;
+    font-family: Russo;
+    margin-left: 5%;
+    font-weight: normal;
+}
+
+.logos {
+    max-width: 1000px;
+    display: inherit;
+    justify-content: flex-end center;
+    align-items: center;
+}
+
+.logos img{
+    width: 20%
+}
+
+.logos img:last-child{
+    margin-left: 10%;
+}
+
+.logos img:not(:last-child) {
+    margin-left: 10%;
+}
