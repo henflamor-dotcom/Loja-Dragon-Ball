@@ -7,15 +7,19 @@
 }
 
 body {
-    background-color: #ff8400;
+  background-color: var(--color-preto);
+  font-family: 'OutfitR', sans-serif;
+  color: var(--color-branco);
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
-  --color-dominant: #FF8C00;
-  --color-secondary: #1A237E;
-  --color-accent: #FFEB3B;
-  --color-neutral-light: #F5F5F5;
-  --color-neutral-dark: #212121;
+  --color-dominante: #FF8C00;
+  --color-secundaria: #1A237E;
+  --color-contraste: #FFEB3B;
+  --color-branco: #F5F5F5;
+  --color-preto: #212121;
   --color-hover: #E9B27F;
 }
 
@@ -97,7 +101,7 @@ header {
 }
 
 .menu nav a{
-    color: var(--color-dominant);
+    color: var(--color-dominante);
     text-decoration: none;
     font-size: 24px;
     height: auto;
@@ -113,7 +117,7 @@ header {
     top: 30px;
     left: 0;
     position: absolute;
-    background-image: linear-gradient(45deg, var(--color-accent), var(--color-dominant));
+    background-image: linear-gradient(45deg, var(--color-contraste), var(--color-dominante));
 }
 
 .menu nav a:hover::after {
@@ -135,7 +139,7 @@ header {
 .socials button {
     width: 50px;
     height: 50px;
-    background-color: var(--color-dominant);
+    background-color: var(--color-dominante);
     border: none;
     border-radius: 15px;
     margin-right: 8px;
@@ -145,11 +149,11 @@ header {
 }
 
 .socials button:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundaria);
 }
 
 .socials button:hover i {
-    color: var(--color-accent);
+    color: var(--color-contraste);
 }
 
 .socials button i {
@@ -162,176 +166,152 @@ header {
 /* Login */
 
 main {
-    margin-top: 5%;
-    max-height: 470px;
-    min-height: 400px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 40px 20px;
+  margin-top: 4%;
 }
+
 
 .login-container {
-    padding-bottom: 30px;
-    width: 100%;
-    max-width: 430px;
-    max-height: 465px;
-    height: inherit;
-    background-image: linear-gradient(45deg, #ff2500, #e78d44);
-    display: inherit;
-    align-items: inherit;
-    justify-content: inherit;
-    border-radius: 15%;
+  background-color: #2A2A2A;
+  border: 2px solid var(--color-dominante);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+  padding: 40px 50px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-form {
-    display: inherit;
-    flex-direction: column;
-    justify-content: inherit;
-    align-items: inherit;
-    height: 100%;
-    max-height: 500px;
-    gap: 10px;
-    margin-top: 40px;
+.login-container:hover {
+  box-shadow: 0 0 35px rgba(255, 140, 0, 0.5);
 }
 
-.btn-login:hover{
-    background-color: rgb(157, 192, 255);
-    color: black;
-    transition-duration: 0.4s;
-}
-
-button.btn-login {
-    width: 12%;
-    margin: 45px 0 5px 0;
-    padding: 5px 50px 5px 50px;
-    background-color: transparent;
-    border-radius: 50px;
-    border: white 1px solid;
-    display: inherit;
-    flex-direction: column;
-    justify-content: inherit;
-    align-items: inherit;
-    font-family: Russo;
-    font-size: 18px;
-    color: azure;
-
-}
 
 .titulo-login {
-    font-size: 45px;
-    color: black;
-    font-family: OutfitB;
-    margin-bottom: 20px !important;
+  font-family: 'Russo', sans-serif;
+  font-size: 40px;
+  color: var(--color-dominante);
+  margin-bottom: 25px;
 }
 
-input.form-control.input-login {
-    width: 320px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    transition: width 0.2s;
-    font-family: OutfitEL;
+
+.formlogin label {
+  font-family: 'OutfitSB';
+  color: var(--color-contraste);
+  display: block;
+  margin-bottom: 6px;
+  text-align: left;
+  font-size: 18px;
 }
 
-.form-group {
-    margin-top: 5%;
-    width: 50%;
-    display: inherit;
-    flex-direction: column;
-    align-items: inherit;
-    justify-content: space-evenly;
+small,
+.form-text {
+  color: var(--color-branco);
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.formlogin .form-group label {
-    -webkit-text-fill-color: black;
-    font-family: OutfitSB;
-    font-size: 18px;
+
+.input-login {
+  width: 100%;
+  padding: 12px;
+  background-color: #1A1A1A;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: var(--color-branco);
+  font-family: 'OutfitEL';
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-small {
-    font-family: OutfitR;
-    font-size: 14px;
-    color: #000000;
+.input-login:focus {
+  border-color: var(--color-secundaria);
+  box-shadow: 0 0 8px rgba(26, 35, 126, 0.5);
+  
 }
 
-.form-group small {
-    -webkit-text-fill-color: #e4c55f;
-    white-space: nowrap;
+
+.btn-login {
+  background-color: var(--color-dominante);
+  color: var(--color-branco);
+  font-family: 'Russo';
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 40px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-small.form-text{
-    -webkit-text-fill-color: #e4c55f;
+.btn-login:hover {
+  background-color: var(--color-contraste);
+  color: black;
+  transform: scale(1.05);
 }
 
-#email {
-    width: 320px;
-}
 
-#email:focus {
-    width: 370px;
-}
-
-#senha {
-    width: 320px;
-}
-
-#senha:focus {
-    width: 370px;
+.formlogin small {
+  -webkit-text-fill-color: var(--color-contraste);
 }
 
 /* Footer */
 
 .fundofooter {
-    margin-top: 8%;
+    margin-top: 7%;
 }
 
 .footer {
     width: 100%;
-    background-color: var(--color-neutral-dark);
-    color: var(--color-neutral-light);
+    background-color: black;
+    color: var(--color-branco);
     padding: 25px 6%;
+    gap: 20px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 20px;
     box-sizing: border-box;
 }
 
 .titulo {
     margin-top: auto;
+    gap: 10px;
+    line-height: 1.4;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
-    line-height: 1.4;
 }
 
 .titulo h4 {
     font-size: 20px;
     font-family: OutfitEL;
     margin: 0;
-    color: var(--color-accent);
+    color: var(--color-contraste);
 }
 
 .titulo h3 {
     font-size: 22px;
     font-family: Russo;
     margin: 0;
-    color: var(--color-dominant);
+    color: var(--color-dominante);
 }
 
 .logos {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
     gap: 25px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .logos img {

@@ -16,12 +16,23 @@ body {
     background-position: center center;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(204, 197, 197, 0.35);
+    z-index: -1;
+}
+
 :root {
-  --color-dominant: #FF8C00;
-  --color-secondary: #1A237E;
-  --color-accent: #FFEB3B;
-  --color-neutral-light: #F5F5F5;
-  --color-neutral-dark: #212121;
+  --color-dominante: #FF8C00;
+  --color-secundaria: #1A237E;
+  --color-contraste: #FFEB3B;
+  --color-branco: #F5F5F5;
+  --color-preto: #212121;
   --color-hover: #E9B27F;
 }
 
@@ -98,7 +109,7 @@ header {
 }
 
 .menu nav a{
-    color: var(--color-dominant);
+    color: var(--color-dominante);
     text-decoration: none;
     font-size: 24px;
     height: auto;
@@ -114,7 +125,7 @@ header {
     top: 30px;
     left: 0;
     position: absolute;
-    background-image: linear-gradient(45deg, var(--color-accent), var(--color-dominant));
+    background-image: linear-gradient(45deg, var(--color-contraste), var(--color-dominante));
 }
 
 .menu nav a:hover::after {
@@ -136,7 +147,7 @@ header {
 .socials button {
     width: 50px;
     height: 50px;
-    background-color: var(--color-dominant);
+    background-color: var(--color-dominante);
     border: none;
     border-radius: 15px;
     margin-right: 8px;
@@ -146,11 +157,11 @@ header {
 }
 
 .socials button:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundaria);
 }
 
 .socials button:hover i {
-    color: var(--color-accent);
+    color: var(--color-contraste);
 }
 
 .socials button i {
@@ -184,7 +195,7 @@ header {
     height: 725px;
     border-radius: 20px;
     background-color: whitesmoke;
-    border: var(--color-dominant) 10px solid;
+    border: var(--color-dominante) 10px solid;
     margin: 5% auto 5% auto;
 
     display: flex;
@@ -195,9 +206,9 @@ header {
 
 .container h1 {
     font-family: Russo;
-    color: var(--color-dominant);
-
+    color: var(--color-dominante);
     margin-top: 1%;
+    
     display: inherit;
     justify-content: inherit;
 }
@@ -221,24 +232,26 @@ header {
 
 .footer {
     width: 100%;
-    background-color: var(--color-neutral-dark);
-    color: var(--color-neutral-light);
+    background-color: black;
+    color: var(--color-branco);
     padding: 25px 6%;
+    gap: 20px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 20px;
     box-sizing: border-box;
 }
 
 .titulo {
     margin-top: auto;
+    gap: 10px;
+    line-height: 1.4;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
-    line-height: 1.4;
 }
 
 .titulo h4 {
@@ -246,7 +259,7 @@ header {
     font-family: OutfitEL;
     font-weight: normal;
     margin: 0;
-    color: var(--color-accent);
+    color: var(--color-contraste);
 }
 
 .titulo h3 {
@@ -254,24 +267,24 @@ header {
     font-family: Russo;
     font-weight: normal;
     margin: 0;
-    color: var(--color-dominant);
+    color: var(--color-dominante);
 }
 
 .logos {
+    gap: 25px;
+    margin: 0 auto auto auto;
+
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 25px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: auto;
 }
 
 .logos img {
     width: 140px;
     height: auto;
-    display: block;
     transition: transform 0.3s ease;
+
+    display: block;
 }
 
 .logos img:hover {
