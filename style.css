@@ -204,7 +204,7 @@ header {
 /* Footer */
 
 .fundofooter {
-    margin-top: 5%;
+    margin-top: 125px;
 }
 
 .footer {
@@ -265,4 +265,5 @@ header {
 .logos img:hover {
     transform: scale(1.1);
 }
+
 
